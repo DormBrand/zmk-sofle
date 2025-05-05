@@ -42,7 +42,7 @@ layers:
   - {t: CONTROLS, h: '$$mdi:gesture-tap-hold$$'}
   - {t: '$$mdi:apple-keyboard-shift$$', h: '$$mdi:gesture-tap-hold$$'}
   - K
-  - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD Z))
+  - Z
   - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD SEMICOLON AND COLON))
   - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD APOSTROPHE AND QUOTE))
   - Q
