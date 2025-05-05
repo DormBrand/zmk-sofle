@@ -44,11 +44,11 @@
 
         butq {
             bindings = <
-&kp DE_CARET    &kp N1     &kp N2        &kp N3           &kp N4          &kp N5             &kp UP_ARROW     &kp N6   &kp N7     &kp N8      &kp N9  &kp N0           &kp BACKSPACE
-&kp DE_SHARP_S  &kp B      &kp U         &kp DE_PERIOD    &kp DE_COMMA    &kp DE_U_UMLAUT    &kp DOWN_ARROW   &kp P    &kp C      &kp L       &kp M   &kp F            &kp X
-&sl 1           &kp H      &kp I         &kp E            &kp A           &kp O              &kp LEFT_ARROW   &kp D    &kp T      &kp R       &kp N   &kp S            &sl 2
-&sk LSHFT       &kp K      &kp Z         &kp DE_O_UMLAUT  &kp APOSTROPHE  &kp Q              &kp RIGHT_ARROW  &kp J    &kp G      &kp W       &kp V   &kp Y            &sk RIGHT_SHIFT
-&kp C_MUTE      &kp LCTRL  &kp LEFT_GUI  &kp LEFT_ALT     &kp SPACE       &kp BACKSPACE      &kp ENTER        &kp TAB  &kp ENTER  &kp ESCAPE  &sl 3   &kp PRINTSCREEN
+&kp DE_CARET    &kp N1     &kp N2        &kp N3           &kp N4        &kp N5             &kp UP_ARROW     &kp N6   &kp N7     &kp N8      &kp N9  &kp N0           &kp BACKSPACE
+&kp DE_SHARP_S  &kp B      &kp U         &kp DE_PERIOD    &kp DE_COMMA  &kp DE_U_UMLAUT    &kp DOWN_ARROW   &kp P    &kp C      &kp L       &kp M   &kp F            &kp X
+&sl 1           &kp H      &kp I         &kp E            &kp A         &kp O              &kp LEFT_ARROW   &kp D    &kp T      &kp R       &kp N   &kp S            &sl 2
+&sk LSHFT       &kp K      &kp Z         &kp DE_O_UMLAUT  &kp SQT       &kp Q              &kp RIGHT_ARROW  &kp J    &kp G      &kp W       &kp V   &kp Y            &sk RIGHT_SHIFT
+&kp C_MUTE      &kp LCTRL  &kp LEFT_GUI  &kp LEFT_ALT     &kp SPACE     &kp BACKSPACE      &kp ENTER        &kp TAB  &kp ENTER  &kp ESCAPE  &sl 3   &kp PRINTSCREEN
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
