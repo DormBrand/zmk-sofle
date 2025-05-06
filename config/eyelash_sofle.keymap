@@ -3,13 +3,13 @@
 
 #include <input/processors.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
+#include "keys_de.h"
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
-#include "keys_de.h"
 
 &mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
 
@@ -44,11 +44,11 @@
 
         butq {
             bindings = <
-&kp DE_CARET    &kp N1     &kp N2        &kp N3           &kp N4        &kp N5             &kp UP_ARROW     &kp N6   &kp N7     &kp N8      &kp N9  &kp N0           &kp BACKSPACE
-&kp DE_SHARP_S  &kp B      &kp U         &kp DE_PERIOD    &kp DE_COMMA  &kp DE_U_UMLAUT    &kp DOWN_ARROW   &kp P    &kp C      &kp L       &kp M   &kp F            &kp X
-&sl 1           &kp H      &kp I         &kp E            &kp A         &kp O              &kp LEFT_ARROW   &kp D    &kp T      &kp R       &kp N   &kp S            &sl 2
-&sk LSHFT       &kp K      &kp Z         &kp DE_O_UMLAUT  &kp SQT       &kp Q              &kp RIGHT_ARROW  &kp J    &kp G      &kp W       &kp V   &kp Y            &sk RIGHT_SHIFT
-&kp C_MUTE      &kp LCTRL  &kp LEFT_GUI  &kp LEFT_ALT     &kp SPACE     &kp BACKSPACE      &kp ENTER        &kp TAB  &kp ENTER  &kp ESCAPE  &sl 3   &kp PRINTSCREEN
+&kp DE_CARET    &kp N1       &kp N2        &kp N3           &kp N4           &kp N5             &kp UP_ARROW     &kp N6   &kp N7     &kp N8      &kp N9  &kp N0           &kp BACKSPACE
+&kp DE_SHARP_S  &kp B        &kp U         &kp DE_PERIOD    &kp DE_COMMA     &kp DE_U_UMLAUT    &kp DOWN_ARROW   &kp P    &kp C      &kp L       &kp M   &kp F            &kp X
+&sl 1           &kp H        &kp I         &kp E            &kp A            &kp O              &kp LEFT_ARROW   &kp D    &kp T      &kp R       &kp N   &kp S            &sl 2
+&sk LSHFT       &mt LCTRL K  &kp DE_Y      &kp DE_O_UMLAUT  &kp DE_A_UMLAUT  &kp Q              &kp RIGHT_ARROW  &kp J    &kp G      &kp W       &kp V   &sk DE_Z         &sk RIGHT_SHIFT
+&kp C_MUTE      &sk LCTRL    &kp LEFT_GUI  &kp LEFT_ALT     &kp SPACE        &kp BACKSPACE      &kp ENTER        &kp TAB  &kp ENTER  &kp ESCAPE  &sl 3   &kp PRINTSCREEN
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -70,11 +70,11 @@
 
         controls {
             bindings = <
-&trans  &trans  &trans          &trans    &trans          &trans      &trans  &trans  &trans         &trans             &trans  &trans  &trans
-&trans  &trans  &trans          &kp UP    &kp SCROLLLOCK  &kp HOME    &trans  &trans  &kp PAGE_UP    &kp K_SCROLL_UP    &trans  &trans  &trans
-&trans  &trans  &kp LEFT_ARROW  &kp DOWN  &kp RIGHT       &kp END     &trans  &trans  &kp PAGE_DOWN  &kp K_SCROLL_DOWN  &trans  &trans  &trans
-&trans  &trans  &trans          &trans    &trans          &trans      &trans  &trans  &trans         &trans             &trans  &trans  &trans
-&trans  &trans  &trans          &trans    &trans          &trans      &trans  &trans  &trans         &trans             &trans  &trans
+&trans  &trans  &trans          &trans     &trans          &trans      &trans  &trans  &trans         &trans             &trans    &trans  &trans
+&trans  &trans  &trans          &kp UP     &kp SCROLLLOCK  &kp HOME    &trans  &trans  &kp PAGE_UP    &kp K_SCROLL_UP    &trans    &trans  &trans
+&trans  &trans  &kp LEFT_ARROW  &kp DOWN   &kp RIGHT       &kp END     &trans  &trans  &kp PAGE_DOWN  &kp K_SCROLL_DOWN  &trans    &trans  &trans
+&trans  &trans  &trans          &trans     &trans          &trans      &trans  &trans  &trans         &trans             &trans    &trans  &trans
+&trans  &trans  &kp LEFT_ARROW  &kp RIGHT  &trans          &trans      &trans  &trans  &trans         &kp UP             &kp DOWN  &trans
             >;
 
             label = "CONTROLS";
