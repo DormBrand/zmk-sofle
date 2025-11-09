@@ -51,7 +51,7 @@ layers:
   - G
   - W
   - V
-  - {t: '(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD Y))', h: '$$mdi:gesture-tap-hold$$'}
+  - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD Y))
   - {t: '$$mdi:apple-keyboard-shift$$', h: '$$mdi:gesture-tap-hold$$'}
   - $$mdi:volume-off$$
   - {t: '$$mdi:apple-keyboard-control$$', h: '$$mdi:gesture-tap-hold$$'}
