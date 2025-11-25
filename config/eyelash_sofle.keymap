@@ -36,6 +36,17 @@
         tap-ms = <100>;
     };
 
+    hold_tap_sticky: hold_tap_sticky {
+        compatible = "zmk,behavior-hold-tap";
+        label = "Hold Key Tap Sticky Key";
+        bindings = <&kp>, <&sk>;
+
+        #binding-cells = <2>;
+        tapping-term-ms = <200>;
+        require-prior-idle-ms = <125>;
+        flavor = "tap-preferred";
+    };
+
     behaviors {
     };
 
@@ -44,11 +55,11 @@
 
         butq {
             bindings = <
-&kp DE_CARET    &kp N1     &kp N2        &kp N3           &kp N4           &kp N5             &kp UP_ARROW     &kp N6   &kp N7     &kp N8      &kp N9  &kp N0           &kp BACKSPACE
-&kp DE_SHARP_S  &kp B      &kp U         &kp DE_PERIOD    &kp DE_COMMA     &kp DE_U_UMLAUT    &kp DOWN_ARROW   &kp P    &kp C      &kp L       &kp M   &kp F            &kp X
-&sl 1           &kp H      &kp I         &kp E            &kp A            &kp O              &kp LEFT_ARROW   &kp D    &kp T      &kp R       &kp N   &kp S            &sl 2
-&sk LSHFT       &kp K      &kp DE_Y      &kp DE_O_UMLAUT  &kp DE_A_UMLAUT  &kp Q              &kp RIGHT_ARROW  &kp J    &kp G      &kp W       &kp V   &kp DE_Z         &sk RIGHT_SHIFT
-&kp C_MUTE      &sk LCTRL  &kp LEFT_GUI  &kp LEFT_ALT     &kp SPACE        &kp BACKSPACE      &kp ENTER        &kp TAB  &kp ENTER  &kp ESCAPE  &sl 3   &kp PRINTSCREEN
+&kp DE_CARET                   &kp N1                        &kp N2        &kp N3                              &kp N4           &kp N5             &kp UP_ARROW     &kp N6   &kp N7     &kp N8      &kp N9  &kp N0           &kp BACKSPACE
+&kp DE_SHARP_S                 &kp B                         &kp U         &kp DE_PERIOD                       &kp DE_COMMA     &kp DE_U_UMLAUT    &kp DOWN_ARROW   &kp P    &kp C      &kp L       &kp M   &kp F            &kp X
+&sl 1                          &kp H                         &kp I         &kp E                               &kp A            &kp O              &kp LEFT_ARROW   &kp D    &kp T      &kp R       &kp N   &kp S            &sl 2
+&hold_tap_sticky LSHFT LSHIFT  &kp K                         &kp DE_Y      &kp DE_O_UMLAUT                     &kp DE_A_UMLAUT  &kp Q              &kp RIGHT_ARROW  &kp J    &kp G      &kp W       &kp V   &kp DE_Z         &hold_tap_sticky RIGHT_SHIFT RIGHT_SHIFT
+&kp C_MUTE                     &hold_tap_sticky LCTRL LCTRL  &kp LEFT_GUI  &hold_tap_sticky LEFT_ALT LEFT_ALT  &kp SPACE        &kp BACKSPACE      &kp ENTER        &kp TAB  &kp ENTER  &kp ESCAPE  &sl 3   &kp PRINTSCREEN
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
