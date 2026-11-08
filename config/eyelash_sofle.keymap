@@ -39,17 +39,18 @@
         tap-ms = <100>;
     };
 
-    hold_tap_sticky: hold_tap_sticky {
-        compatible = "zmk,behavior-hold-tap";
-        label = "Hold Key Tap Sticky Key";
-        bindings = <&kp>, <&sk>;
-
-        #binding-cells = <2>;
-        tapping-term-ms = <200>;
-        require-prior-idle-ms = <125>;
-        flavor = "tap-preferred";
-    };
     behaviors {
+        hold_tap_sticky: hold_tap_sticky {
+            compatible = "zmk,behavior-hold-tap";
+            display-name = "Hold Key Tap Sticky Key";
+            bindings = <&kp>, <&sk>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            require-prior-idle-ms = <125>;
+            flavor = "tap-preferred";
+        };
+
         rsr_vol: rsr_vol {
             compatible = "zmk,behavior-runtime-sensor-rotate";
             #sensor-binding-cells = <0>;
@@ -71,6 +72,8 @@
         combo-switch {
             bindings = <&tog 4>;
             key-positions = <47 14>;
+        };
+
         softoff {
             bindings = <&soft_off>;
             key-positions = <14 28 40>;
@@ -132,7 +135,7 @@
 &trans  &trans  &kp LEFT_ARROW  &kp RIGHT  &trans          &trans      &trans  &trans  &trans         &kp UP             &kp DOWN  &trans
             >;
 
-            label = "CONTROLS";
+            display-name = "CONTROLS";
         };
 
         bt_rgb {
@@ -157,7 +160,7 @@
 &trans          &kp LEFT_ALT  &kp LEFT_ARROW  &kp RIGHT_ARROW  &kp SPACE  &kp BACKSPACE    &trans  &kp TAB  &kp ENTER  &kp UP        &kp DOWN    &kp RIGHT_WIN
             >;
 
-            display-name = "LAYER3";
+            display-name = "QWERTZ";
             sensor-bindings = <&rsr_vol &rsr_trans>;
         };
 
